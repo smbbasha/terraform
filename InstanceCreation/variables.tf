@@ -1,12 +1,12 @@
 variable "key_name" {
-  default = "devop-aws-demo"
+  default = "mansoor"
 }
 
 variable "pvt_key" {
-  default = "/var/lib/jenkins/devop-aws-demo.pem"
+  default = "/root/.ssh/mansoor.pem"
 }
 
 variable "sg-id" {
-  default = "sg-047b1b2b557d3339d"
+  default = "sg-04a603e452cff2d4a"
 }
 
