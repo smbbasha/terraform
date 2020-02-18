@@ -7,9 +7,7 @@ node {
    git 'https://github.com/smbbasha/terraform.git'
   }
 def project_path=""
- 
  dir(project_path) {
-    
   stage('Maven-Clean') {
    sh label: 'CLEAN', script: 'mvn clean'
   }
