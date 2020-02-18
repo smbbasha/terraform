@@ -6,9 +6,14 @@ node {
   stage('Git-Checkout') {
    git 'https://github.com/smbbasha/terraform.git'
   }
-   
-  
-  
+def project_path=""
+ 
+ dir(project_path) {
+    
+  stage('Maven-Clean') {
+   sh label: 'CLEAN', script: 'mvn clean'
+  }
+ } 
 def project_terra="InstanceCreation"
 dir(project_terra) {
    stage('Prod Deployment on AWS'){
